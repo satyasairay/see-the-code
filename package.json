@@ -1,0 +1,55 @@
+{
+  "name": "see-the-code",
+  "version": "1.0.0",
+  "description": "A lightweight developer tool that shows source code locations for UI elements",
+  "main": "overlay/inject.js",
+  "bin": {
+    "see-the-code": "./cli/generate.js"
+  },
+  "scripts": {
+    "demo": "echo 'Open demo/index.html in a browser and inject overlay/inject.js'",
+    "test": "node cli/generate.js --input demo --output code-map.json",
+    "test:cli": "cd cli && npm test",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\"",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {}\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "developer-tools",
+    "debugging",
+    "overlay",
+    "source-mapping",
+    "ui-inspection"
+  ],
+  "author": "Satyasai Ray",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satyasairay/see-the-code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/satyasairay/see-the-code/issues"
+  },
+  "homepage": "https://github.com/satyasairay/see-the-code#readme",
+  "files": [
+    "overlay/",
+    "cli/",
+    "demo/",
+    "code-map.json",
+    "README.md",
+    "inject-bookmarklet.html"
+  ]
+}
+

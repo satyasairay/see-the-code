@@ -1,0 +1,65 @@
+# Source files (only include built/dist files if any)
+# Note: We're including source files, so most of this is for test/dev files
+
+# Test files and test repositories
+cli/__tests__/
+**/__tests__/
+**/*.test.js
+**/*.spec.js
+**/*-test/
+**/repos/
+
+# Test results and reports
+**/results.json
+**/aggregate-results.json
+**/code-map.json
+!demo/code-map.json
+
+# Documentation (internal planning)
+global_docs/
+
+# Development files
+.git/
+.gitignore
+.editorconfig
+.prettierrc.json
+.prettierignore
+.eslintrc.json
+.eslintcache
+
+# CI/CD
+.github/
+.travis.yml
+.circleci/
+.gitlab-ci.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Cache
+.cache/
+**/.cache/
+
+# Environment
+.env
+.env.*
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Temporary
+*.tmp
+*.temp
+

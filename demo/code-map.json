@@ -1,0 +1,170 @@
+{
+  "div": {
+    "file": "demo/conditional-test.jsx",
+    "line": 18
+  },
+  ".container": {
+    "file": "demo/conditional-test.jsx",
+    "line": 5
+  },
+  ".modal": {
+    "file": "demo/conditional-test.jsx",
+    "line": 7
+  },
+  "button": {
+    "file": "demo/conditional-test.jsx",
+    "line": 13
+  },
+  ".active-btn": {
+    "file": "demo/conditional-test.jsx",
+    "line": 11
+  },
+  "#active-button": {
+    "file": "demo/conditional-test.jsx",
+    "line": 11
+  },
+  ".inactive-btn": {
+    "file": "demo/conditional-test.jsx",
+    "line": 13
+  },
+  "#inactive-button": {
+    "file": "demo/conditional-test.jsx",
+    "line": 13
+  },
+  ".wrapper": {
+    "file": "demo/conditional-test.jsx",
+    "line": 18
+  },
+  "span": {
+    "file": "demo/conditional-test.jsx",
+    "line": 19
+  },
+  ".badge": {
+    "file": "demo/conditional-test.jsx",
+    "line": 19
+  },
+  ".product-card": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 13
+  },
+  ".product-header": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 14
+  },
+  "img": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 15
+  },
+  ".product-image": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 15
+  },
+  "[data-testid=\"product-image\"]": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 15
+  },
+  ".favorite-btn": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 21
+  },
+  ".product-body": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 30
+  },
+  "h3": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 31
+  },
+  ".product-title": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 31
+  },
+  "p": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 32
+  },
+  ".product-description": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 32
+  },
+  ".product-price": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 33
+  },
+  ".price-amount": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 34
+  },
+  ".price-original": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 36
+  },
+  ".product-footer": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 41
+  },
+  ".quantity-selector": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 42
+  },
+  ".quantity-btn": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 58
+  },
+  ".decrease": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 43
+  },
+  "[data-action=\"decrease\"]": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 43
+  },
+  "input": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 50
+  },
+  ".quantity-input": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 50
+  },
+  "[data-testid=\"quantity-input\"]": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 50
+  },
+  ".increase": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 58
+  },
+  "[data-action=\"increase\"]": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 58
+  },
+  ".add-to-cart-btn": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 67
+  },
+  ".primary": {
+    "file": "demo/examples/react-component.jsx",
+    "line": 67
+  },
+  ".test-container": {
+    "file": "demo/test-component.jsx",
+    "line": 5
+  },
+  "#test-id": {
+    "file": "demo/test-component.jsx",
+    "line": 5
+  },
+  ".submit-btn": {
+    "file": "demo/test-component.jsx",
+    "line": 6
+  },
+  "[data-testid=\"submit-button\"]": {
+    "file": "demo/test-component.jsx",
+    "line": 6
+  },
+  ".dynamic": {
+    "file": "demo/test-component.jsx",
+    "line": 9
+  }
+}

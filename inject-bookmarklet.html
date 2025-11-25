@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See The Code - Bookmarklet</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .bookmarklet {
+            display: inline-block;
+            padding: 15px 25px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 20px 0;
+            cursor: move;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .bookmarklet:hover {
+            background: #0056b3;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>See The Code - Bookmarklet</h1>
+    
+    <div class="instructions">
+        <h2>How to Use</h2>
+        <ol>
+            <li>Drag the bookmarklet button below to your browser's bookmarks bar</li>
+            <li>Navigate to your local development server</li>
+            <li>Click the bookmarklet to inject the See The Code overlay</li>
+        </ol>
+    </div>
+    
+    <div>
+        <a class="bookmarklet" href="javascript:(function(){const baseUrl=prompt('Enter base URL for See The Code files (or leave empty to try common paths):\n\nExamples:\n- http://localhost:3000\n- https://your-domain.com\n- ./ (relative to current page)\n\nLeave empty to auto-detect.','./')||'./';const paths=[baseUrl+'/overlay/inject.js',baseUrl+'overlay/inject.js','./overlay/inject.js','../overlay/inject.js','/overlay/inject.js'];let tried=0;function tryLoad(path){if(tried>=paths.length){alert('Error: Could not load overlay/inject.js from any path.\n\nTried:\n'+paths.join('\n')+'\n\nPlease:\n1. Make sure overlay/inject.js is accessible\n2. Use the console method instead (see below)\n3. Or serve files from a web server');return;}const script=document.createElement('script');script.src=paths[tried];script.onload=function(){console.log('[SeeTheCode] Loaded from:',paths[tried]);if(window.SeeTheCode&&baseUrl!=='./'){window.SeeTheCode.setCodeMapUrl(baseUrl+'/code-map.json');}};script.onerror=function(){tried++;tryLoad();};document.head.appendChild(script);}tryLoad();})();">
+            📍 See The Code
+        </a>
+    </div>
+    
+    <div class="warning">
+        <strong>Note:</strong> The bookmarklet will prompt you for the base URL. You can:
+        <ul>
+            <li>Enter a full URL like <code>http://localhost:3000</code> or <code>https://your-domain.com</code></li>
+            <li>Enter a relative path like <code>./</code> or <code>../</code></li>
+            <li>Leave empty to try common paths automatically</li>
+        </ul>
+        The script will try multiple paths to find <code>overlay/inject.js</code>.
+    </div>
+    
+    <div class="instructions">
+        <h2>Alternative: Browser Console Method (Recommended)</h2>
+        <p>If the bookmarklet doesn't work, use the console method which is more reliable:</p>
+        <ol>
+            <li>Open your browser's developer console (F12)</li>
+            <li>Copy and paste this code (adjust the baseUrl if needed):</li>
+            <pre><code>// Set your base URL here (adjust as needed)
+const baseUrl = './'; // or 'http://localhost:3000' or your actual URL
+
+const script = document.createElement('script');
+script.src = baseUrl + 'overlay/inject.js';
+script.onload = () => {
+  console.log('See The Code overlay loaded!');
+  // Optionally set code map URL if different
+  if (window.SeeTheCode && baseUrl !== './') {
+    window.SeeTheCode.setCodeMapUrl(baseUrl + 'code-map.json');
+  }
+};
+script.onerror = () => {
+  console.error('Failed to load overlay/inject.js from:', script.src);
+  console.log('Try adjusting the baseUrl variable above');
+};
+document.head.appendChild(script);</code></pre>
+            <li>Press Enter to execute</li>
+            <li>Check the console for success/error messages</li>
+        </ol>
+    </div>
+    
+    <div class="instructions">
+        <h2>Remote Code Map</h2>
+        <p>To use a remote code map URL, after injecting the script, run this in the console:</p>
+        <pre><code>// Modify CONFIG before script loads, or use the public API:
+window.SeeTheCode?.reload();
+// Then manually set the codeMapUrl in overlay/inject.js CONFIG</code></pre>
+        <p>Or modify the <code>CONFIG.codeMapUrl</code> in <code>overlay/inject.js</code> before injecting.</p>
+    </div>
+</body>
+</html>
+
